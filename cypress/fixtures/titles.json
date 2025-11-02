@@ -1,0 +1,14 @@
+{
+  "signup": "New User Signup!",
+  "enter_account_information": "Enter Account Information",
+  "login": "Login to your account",
+  "account_created": "Account Created!",
+  "account_deleted": "Account Deleted!",
+  "get_in_touch": "Get In Touch",
+  "test_cases": "Test Cases",
+  "all_products": "All Products",
+  "searched_products": "Searched Products",
+  "subscription": "Subscription",
+  "order_placed": "Order Placed!",
+  "full_fledged": "Full-Fledged practice website for Automation Engineers"
+}

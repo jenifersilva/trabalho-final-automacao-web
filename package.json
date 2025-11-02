@@ -1,0 +1,28 @@
+{
+  "name": "trabalho-final-automacao-web",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "cy:open": "cypress open",
+    "cy:run": "cypress run",
+    "cy:run:chrome": "cypress run --browser chrome",
+    "lint": "eslint . --ext .js",
+    "lint:fix": "eslint . --ext .js --fix",
+    "format": "prettier --write \"**/*.{js,json,md}\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@faker-js/faker": "^10.0.0",
+    "cypress": "^15.3.0",
+    "cypress-mochawesome-reporter": "^4.0.2",
+    "cypress-xpath": "^2.0.1",
+    "eslint": "^8.0.0",
+    "eslint-config-prettier": "^8.0.0",
+    "eslint-plugin-cypress": "^2.13.0",
+    "prettier": "^2.8.0"
+  }
+}

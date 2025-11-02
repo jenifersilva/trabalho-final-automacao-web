@@ -1,0 +1,49 @@
+name: Web E2E Tests and Report
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  cypress-run:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Node version
+        run: node --version
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Code lint
+        run: npm run lint
+
+      - name: Run Cypress tests
+        run: npm run cy:run
+
+      - name: Upload report artifact
+        uses: actions/upload-artifact@v4
+        if: ${{ !cancelled() }}
+        with:
+          name: Report
+          path: |
+            cypress/reports
+            cypress/screenshots
+            cypress/videos
+
+      - name: Publish GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        if: ${{ !cancelled() }}
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: cypress/reports/html
+          publish_branch: gh-pages
