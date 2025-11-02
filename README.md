@@ -8,8 +8,6 @@ Este repositório contém a suíte de testes automatizados de ponta a ponta (E2E
 
 ## Estrutura do Projeto
 
-O projeto adota as melhores práticas da comunidade Cypress, incluindo o padrão **Page Object Model (POM)**, para garantir que os testes sejam legíveis, reutilizáveis e fáceis de manter.
-
 ```
 trabalho-final-automacao-web/
 ├── cypress/
